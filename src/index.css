@@ -28,10 +28,25 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(45deg, #2c3e50, #34495e, #7f8c8d);
+  background-size: 600% 600%;
+  animation: animation 10s ease infinite;
+}
+
+@keyframes animation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 1.8rem;
   line-height: 1.1;
 }
 

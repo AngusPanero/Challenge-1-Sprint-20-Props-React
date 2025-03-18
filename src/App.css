@@ -1,8 +1,14 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.root-div{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .logo {
@@ -39,4 +45,37 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.task-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+input {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  border: 1px solid #7f8c8d; 
+  color: white; 
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 250px; 
+  outline: none;
+  transition: all 0.7s ease; 
+}
+
+input:focus {
+  border-color: #1abc9c; 
+  background: linear-gradient(45deg, #34495e, #2c3e50); 
+  box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
+  transition: 0.7s;
+}
+
+input:hover {
+  border-color: #1abc9c; 
+  background: linear-gradient(45deg, #34495e, #2c3e50); 
+  box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
+  transition: 0.7s;
 }

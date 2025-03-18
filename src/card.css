@@ -1,0 +1,69 @@
+.task-card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.7s;
+}
+
+.task-card:hover {
+    border-color: #1abc9c;
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
+    transition: 0.7s;
+}
+
+p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+button{
+    width: 10rem;
+    margin-bottom: 0.5rem;
+}
+
+.button-completed {
+    background: linear-gradient(45deg, #4caf50, #388e3c, #2c6f2f, #1b5e20); /* Colores verdes */
+    background-size: 600% 600%;
+    animation: greenAnimation 10s ease infinite;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes greenAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.button-incomplete{
+    background: linear-gradient(45deg, #f44336, #d32f2f, #c62828, #b71c1c); /* Colores rojos */
+    background-size: 600% 600%;
+    animation: greenAnimation 10s ease infinite;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes greenAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
