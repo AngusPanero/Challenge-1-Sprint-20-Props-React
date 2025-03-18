@@ -27,7 +27,7 @@ button{
 }
 
 .button-completed {
-    background: linear-gradient(45deg, #4caf50, #388e3c, #2c6f2f, #1b5e20); /* Colores verdes */
+    background: linear-gradient(45deg, #4caf50, #388e3c, #2c6f2f, #1b5e20); 
     background-size: 600% 600%;
     animation: greenAnimation 10s ease infinite;
     color: white;
@@ -48,7 +48,7 @@ button{
 }
 
 .button-incomplete{
-    background: linear-gradient(45deg, #f44336, #d32f2f, #c62828, #b71c1c); /* Colores rojos */
+    background: linear-gradient(45deg, #f44336, #d32f2f, #c62828, #b71c1c); 
     background-size: 600% 600%;
     animation: greenAnimation 10s ease infinite;
     color: white;
