@@ -1,28 +1,39 @@
 import './App.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CreateTask from './components/AddTaskForm';
 import TaskCard from './components/Task';
 
 const App = () => {
   const [tasks, setTasks] = useState([
     { id: 1, text: 'Hacer la compra', completed: false },
-    { id: 2, text: 'Llamar al médico', completed: true },
+    { id: 2, text: 'Llamar al médico', completed: false },
     { id: 3, text: 'Hacer ejercicio', completed: false }
   ]);
 
+  useEffect(() => {
+    const localTasks = localStorage.getItem("tasks")
+      if(localTasks){
+        setTasks(JSON.parse(localTasks))
+      }
+    }, [])
+
   const addTask = (taskForm) => {
     const addNewTask = { id: tasks.length +1, text: taskForm, completed: false }
-    setTasks([...tasks, addNewTask])
+    const updatedTasks = [...tasks, addNewTask]
+    setTasks(updatedTasks)
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks))
   }
 
   const deleteTask = (id) => {
-    setTasks(tasks.filter((task) => task.id !== id))
+    const updatedTasks = tasks.filter((task) => task.id !== id)
+    setTasks(updatedTasks)
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks))
   }
 
   const markAsComplete = (id) => {
-    setTasks(
-      tasks.map((task) => task.id === id ? { ...task, completed: !task.completed } : task)
-    )
+    const updatedTasks = tasks.map((task) => task.id === id ? { ...task, completed: !task.completed } : task)
+    setTasks(updatedTasks)
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks))
   }
 
   return (
